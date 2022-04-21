@@ -8,7 +8,7 @@ const defer = () => {
     return obj
 }
 
-module.exports = class VideoFirstFrame {
+exports.VideoFirstFrame = class VideoFirstFrame {
   /**
    * 获取视频首帧
    * @param {HTMLVideoElement} urlOrEl
