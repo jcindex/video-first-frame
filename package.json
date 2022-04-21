@@ -1,0 +1,24 @@
+{
+  "name": "video-first-frame",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "pub": "npm publish --registry=https://registry.npmjs.org",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcindex/video-first-frame.git"
+  },
+  "keywords": [
+    "video", "first-frame", "video frame", "canvas"
+  ],
+  "author": "Nardy <1259145811@qq.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/jcindex/video-first-frame/issues"
+  },
+  "homepage": "https://github.com/jcindex/video-first-frame#readme"
+}
