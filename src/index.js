@@ -51,6 +51,17 @@ export const VideoFirstFrame = {
       urlOrEl.setAttribute("x5-video-player-type", "h5")
       urlOrEl.setAttribute("playsinline", "true")
       urlOrEl.setAttribute("webkit-playsinline", "true")
+      urlOrEl.onplay = function () {
+        if (typeof urlOrEl.webkitExitFullscreen === "function") {
+          urlOrEl.webkitExitFullscreen()
+        }
+        if (typeof urlOrEl.mozExitFullscreen === "function") {
+          urlOrEl.mozExitFullscreen()
+        }
+        if (typeof urlOrEl.exitFullscreen === "function") {
+          urlOrEl.exitFullscreen()
+        }
+      }
       urlOrEl.style.cssText = `position: absolute;left: -100000px;top: -1000000px;`
       document.body.appendChild(urlOrEl)
       urlOrEl.play()
