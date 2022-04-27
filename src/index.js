@@ -47,6 +47,10 @@ export const VideoFirstFrame = {
       urlOrEl = document.createElement("video")
       urlOrEl.src = url
       urlOrEl.volume = 0
+      urlOrEl.playsInline = true
+      urlOrEl.setAttribute("x5-video-player-type", "h5")
+      urlOrEl.setAttribute("playsinline", "true")
+      urlOrEl.setAttribute("webkit-playsinline", "true")
       urlOrEl.style.cssText = `position: absolute;left: -100000px;top: -1000000px;`
       document.body.appendChild(urlOrEl)
       urlOrEl.play()
