@@ -68,7 +68,10 @@ export const VideoFirstFrame = {
     }
     const defered = defer()
     urlOrEl.oncanplay = function (e) {
-      video2canvas(e.target, returnBlob, quality, defered.resolve)
+      setTimeout(() => {
+        // 延时100ms，解决ios下首屏为白屏问题
+        video2canvas(e.target, returnBlob, quality, defered.resolve)
+      }, 100)
     }
     urlOrEl.onerror = function (e) {
       defered.reject(e)
