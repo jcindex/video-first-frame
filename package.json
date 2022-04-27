@@ -1,6 +1,6 @@
 {
   "name": "video-first-frame",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "浏览器获取视频首帧功能-简易版本",
   "type": "module",
   "main": "src/index.js",
