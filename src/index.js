@@ -12,7 +12,11 @@ function video2canvas(video, returnBlob, quality, done) {
   canvas.width = video.videoWidth
   canvas.height = video.videoHeight
   const ctx = canvas.getContext("2d")
-  ctx.drawImage(video, 0, 0)
+  try {
+    ctx.drawImage(video, 0, 0)
+  } catch(e) {
+    return done(null)
+  }
   if (!returnBlob) {
     done(canvas.toDataURL("image/png", 1))
     return
